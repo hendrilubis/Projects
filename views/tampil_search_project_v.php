@@ -1,13 +1,7 @@
 <h1>Daftar Project</h1>
 <?php echo form_open('projects/search_project'); ?>
 Search:<input type="text" name="keyword">
-<input type="submit" name="search" value="search">    <a href="#">Advanced Search</a><br/>
-<?php echo form_close(); ?>
-<?php echo form_open('projects/sort_project'); ?>
-Sort by:
-<input type="radio" name="sortKey" value="1" checked>Nama Project 
-<input type="radio" name="sortKey" value="2">Budget 
-<input type="submit" name="sort" value="sort">
+<input type="submit" name="search" value="search">    <a href="#">Advanced Search</a>
 <?php echo form_close(); ?>
 <table border = '1'>
 	<tr bgcolor=#eeeeee>

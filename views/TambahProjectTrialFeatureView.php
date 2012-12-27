@@ -1,42 +1,6 @@
-<head>
-<script type="text/javascript">
-function tambahItem(idTabel)
-{
-      var idtabel = document.getElementById(idTabel);
-      var nama_dokumen = document.getElementById('nama_dokumen').value;
-      var ekstensi = document.getElementById('ekstensi').value;
-      var jumBaris = idtabel.rows.length;
-      var baris = idtabel.insertRow(jumBaris);
-      
-      var kolom1 = baris.insertCell(0);
-      kolom1.innerHTML = '<input type="text" name="text1[]" value="'+nama_dokumen+'" readonly=readonly style="background-color:white;border:none" />'; 
-      document.getElementById('nama_dokumen').value = '';
+Project Trial
+<?php echo form_open('projects/VerifikasiProject'); ?>
 
-      var kolom2 = baris.insertCell(1);
-      kolom2.innerHTML = '<input type="text" name="text2[]" value=".'+ekstensi+'" readonly=readonly style="background-color:white;border:none" />'; 
-      document.getElementById('ekstensi').value = '';
-
-}
-
-function hapusItem(idTabel)
-{
-      try{
-      var idtabel = document.getElementById(idTabel);
-      var jumBaris = idtabel.rows.length;
-
-      idtabel.deleteRow(jumBaris-1);
-      jumBaris--;
-
-      }catch(e){
-            alert(e);
-      }
-}
-
-</script>
-
-<h1>Fitur untuk Project (Optional)</h1><br>
-
-<?php echo form_open('projects/tampil_verifikasi_project'); ?>
 <?php
 
 //fungsi-fungsi form hidden untuk menerima data dari masukkan sebelumnya
@@ -49,7 +13,7 @@ echo form_hidden('date_updated',$date_updated);
 
 ?>
 
-      <input type="checkbox" name="Fitur1" value="1">
+	<input type="checkbox" name="Fitur1" value="1">
       Saya ingin Project ini terdaftar sebagai Project yang disertai Fitur. Project yang disertai
       Fitur akan dibuat lebih menarik, sehingga Kualitas hasil biddingnya akan lebih baik pula.
       Project akan ditampilkan secara mencolok di halaman Beranda.
@@ -77,6 +41,6 @@ echo form_hidden('date_updated',$date_updated);
       Saya ingin para bidder project ini adalah bidder yang terverifikasi.
       , Harga : Rp.15.000<br>
 
-<input type="submit" id="submitProject2" value="Lanjut!">
+<input type="submit" id="submitProject2" value="Continue">
 
 <?php echo form_close(); ?>

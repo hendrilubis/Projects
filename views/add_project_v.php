@@ -97,8 +97,21 @@ Skill yang dibutuhkan<br/>
 ?>
 
 Budget<br/>
-	<?php echo form_input('budget',''); ?><?php echo form_error('budget'); ?>
-	<br/>
+<?php 
+
+$options = array(
+                  '< 5.000.000' => 'Kurang dari Rp. 5.000.000,00',
+                  '5.000.000 - 10.000.000' => 'Rp. 5.000.000,00 - Rp. 10.000.000,00',
+                  '10.000.000 - 50.000.000' => 'Rp. 10.000.000,00 - Rp. 50.000.000,00',
+                  '50.000.000 - 100.000.000' => 'Rp. 50.000.000,00 - Rp. 100.000.000,00',
+                  '> 100.000.000' => 'Lebih dari Rp. 100.000.000,00',
+                  '-' => 'Tidak Yakin',
+                  'Customize Range' => 'Range Sendiri'
+                );
+
+echo form_dropdown('budget', $options, '< 5.000.000');
+
+?><br/>
 
 <input type="checkbox" id="sepakat1" onclick="goFurther()">
 Saya akan menggunakan iPro Rekening Bersama. [Kami mewajibkan pengguna layanan iPro untuk menggunakan iPro Rekening Bersama. Hal ini ditujukan untuk menghindari penipuan; serta memberikan jaminan uang kembali jika kualitas pekerjaan kontraktor tidak sesuai kualitas dan tidak tepat waktu; serta menengahi jika terjadi sengketa. Hal tersebut kami lakukan untuk menjaga citra iPro sebagai tempat yang aman dan nyaman dalam bertransaksi proyek. Mohon dimaklumi]<br/>

@@ -1,9 +1,9 @@
 <h1>Daftar Project</h1>
-<?php echo form_open('projects/search_project'); ?>
+<?php echo form_open('projects/CariProject'); ?>
 Search:<input type="text" name="keyword">
 <input type="submit" name="search" value="search">    <a href="#">Advanced Search</a><br/>
 <?php echo form_close(); ?>
-<?php echo form_open('projects/sort_project'); ?>
+<?php echo form_open('projects/UrutProject'); ?>
 Sort by:
 <input type="radio" name="sortKey" value="1" checked>Nama Project 
 <input type="radio" name="sortKey" value="2">Budget 
@@ -25,7 +25,7 @@ Sort by:
         <td align="center"><?php echo $item->description; ?></td> 
         <td align="center" bgcolor=#eeeeee><?php echo $item->budget; ?></td>
         <td align="center"><?php echo $item->date_expired; ?></td>
-        <td align="center" bgcolor=#eeeeee><a href="<?php echo site_url('Projects/tampil_selected_project/'.$item->project_id) ?>">Details</a></td>
+        <td align="center" bgcolor=#eeeeee><a href="<?php echo site_url('Projects/TampilDetailProject/'.$item->project_id) ?>">Details</a></td>
         </tr>
       <?php $i++; } ?>
 </table>

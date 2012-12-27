@@ -1,6 +1,6 @@
 <h1>Verifikasi Project</h1>
 
-<?php echo form_open('projects/tambah_project'); ?>
+<?php echo form_open('projects/SimpanProject'); ?>
 
 <table border="0">
 	<tr height="40px">
@@ -46,6 +46,6 @@
 
 ?>
 
-<input type="submit" id="submitProject2" value="Lanjut!">
+<input type="submit" id="submitProject2" value="OK">
 
 <?php echo form_close(); ?>
